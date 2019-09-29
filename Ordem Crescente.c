@@ -13,4 +13,4 @@ main () {
     else {
         printf ("%.1f,%.1f",N2,N1);
     }
-    }
+}
