@@ -9,8 +9,10 @@ main () {
     printf ("Manda o segundo numero: ");
     scanf ("%d",&N2);
 
-    if (N1>N2) 
+    if (N1>N2) {
         printf ("%d eh menor do que %d",N2,N1);
-    else 
+    }
+    else { 
         printf ("%d eh menor do que %d",N1,N2);
+    }
 }
