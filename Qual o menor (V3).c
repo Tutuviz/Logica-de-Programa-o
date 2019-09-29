@@ -10,15 +10,19 @@ main() {
     scanf ("%d",&N3);
     
     Menor = N1;
-    if (N2<Menor)
+    if (N2<Menor) {
         Menor = N2;
-    else 
+    }
+    else { 
         Menor = Menor;
+    }
 
-    if (N3<Menor)
+    if (N3<Menor) {
         Menor = N3;
-    else 
+    }
+    else { 
         Menor = Menor;
+    }
         
 	printf ("O menor numero eh %d",Menor);
     
