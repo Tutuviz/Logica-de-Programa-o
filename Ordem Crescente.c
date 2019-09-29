@@ -7,8 +7,10 @@ main () {
     printf ("Digite outro numero ae: ");
     scanf ("%f",&N2);
 
-    if (N1<N2)
+    if (N1<N2) {
         printf ("%.1f,%.1f",N1,N2);
-    else 
+    }
+    else {
         printf ("%.1f,%.1f",N2,N1);
+    }
     }
