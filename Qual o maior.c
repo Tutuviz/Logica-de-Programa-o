@@ -6,8 +6,10 @@ main () {
     scanf ("%d",&N1);
     printf ("Manda ae outro numero: ");
     scanf ("%d",&N2);
-    if (N1>N2)
+    if (N1>N2) {
         printf ("%d eh maior que %d\n",N1,N2);
-    else
+    }
+    else {
         printf ("%d eh maior que %d\n",N2,N1);
+    }
 }
