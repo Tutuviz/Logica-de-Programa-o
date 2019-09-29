@@ -9,8 +9,10 @@ main() {
     printf ("Digite a terceira nota: ");
     scanf ("%f",&N3);
 
-    if (((N1+N2+N3)/3)>=7) 
+    if (((N1+N2+N3)/3)>=7) {
         printf ("O aluno passou com %.2f",(N1+N2+N3)/3);
-    else 
+    }
+    else {
         printf ("O aluno perdeu com %.2f",(N1+N2+N3)/3);
+    }
 }
