@@ -27,7 +27,7 @@ int sum (int vet[], int max) {
     return sum;
 }
 
-float med (int sum, int max) {
+float med (float sum, float max) {
     int loop;
     float med;
     printf ("\nMedia:\n");
