@@ -7,13 +7,13 @@ typedef struct {
 }id;
 
 void preencher (id vet[], int position){
-    printf ("\nDigite seu nome: ");
+    printf ("\nDigite o nome: ");
     scanf ("%s", &vet[position].nome);
-    printf ("Digite seu sobrenome: ");
+    printf ("Digite o sobrenome: ");
     scanf ("%s", &vet[position].sobrenome);
-    printf ("Digite sua idade: ");
+    printf ("Digite a idade: ");
     scanf ("%d", &vet[position].idade);
-    printf ("Digite seu sexo: ");
+    printf ("Digite o sexo: ");
     scanf ("%s", &vet[position].sexo);
 }
 
@@ -65,7 +65,7 @@ main() {
         //Escolha de exames
         case 1:
             for (loop = 0; loop < max; loop++) {
-                printf ("\n1 - Raio x\n2 - Mamografia\n3 - Ultrassonografia\n4 - Ressonancia\nEscolha sua consulta: ");
+                printf ("\n1 - Raio x\n2 - Mamografia\n3 - Ultrassonografia\n4 - Ressonancia\nEscolha uma consulta: ");
                 scanf ("%d", &exam);
                 switch (exam) {
                 case 1:
