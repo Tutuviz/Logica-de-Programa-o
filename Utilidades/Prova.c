@@ -54,45 +54,62 @@ void ressonancia (id vet[], int max){
 }
 
 main() {
-    int x; 
+    int exam, menu, stop=1; 
     id raio[max], mamo[max], ultra[max], resso[max];
     int qtd_raio=0, qtd_mamo=0, qtd_ultra=0, qtd_resso=0;
-    //Escolha de exames
-    for (loop = 0; loop < max; loop++) {
-        printf ("\n1 - Raio x\n2 - Mamografia\n3 - Ultrassonografia\n4 - Ressonancia\nEscolha sua consulta: ");
-        scanf ("%d", &x);
-        //Cadastro
-        switch (x) {
+    //Menu
+    while (stop!=0) {
+        printf ("\n1 - Cadastrar\n2 - Ver exames cadastrados\n3 - Sair do menu \nEscolha sua opcao: ");
+        scanf ("%d", &menu);
+        switch (menu) {
+        //Escolha de exames
         case 1:
-            preencher (raio, qtd_raio);
-            qtd_raio++;
-            break;
+            for (loop = 0; loop < max; loop++) {
+                printf ("\n1 - Raio x\n2 - Mamografia\n3 - Ultrassonografia\n4 - Ressonancia\nEscolha sua consulta: ");
+                scanf ("%d", &exam);
+                switch (exam) {
+                case 1:
+                    preencher (raio, qtd_raio);
+                    qtd_raio++;
+                    break;
 
+                case 2:
+                    preencher (mamo, qtd_mamo);
+                    qtd_mamo++;
+                    break;
+
+                case 3:
+                    preencher (ultra, qtd_ultra);
+                    qtd_ultra++;
+                    break;
+
+                case 4:
+                    preencher (resso, qtd_resso);
+                    qtd_resso++;
+                    break;
+
+                default:
+                    printf ("Opcao Invalida");
+                    loop--;
+                    break;
+                }
+            }
+            break;
+        //Mostrar os exames
         case 2:
-            preencher (mamo, qtd_mamo);
-            qtd_mamo++;
+            raio_x (raio, qtd_raio);
+            mamografia (mamo, qtd_mamo);
+            ultrassonografia (ultra, qtd_ultra);
+            ressonancia (resso, qtd_resso);
             break;
-
+        //Saida do programa
         case 3:
-            preencher (ultra, qtd_ultra);
-            qtd_ultra++;
+            stop = 0;
             break;
-
-        case 4:
-            preencher (resso, qtd_resso);
-            qtd_resso++;
-            break;
-
+        //Escolha errada
         default:
             printf ("Opcao Invalida");
-            loop--;
             break;
         }
     }
-    //Mostrar os exames
-
-    raio_x (raio, qtd_raio);
-    mamografia (mamo, qtd_mamo);
-    ultrassonografia (ultra, qtd_ultra);
-    ressonancia (resso, qtd_resso);
 }
