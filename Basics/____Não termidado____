@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+main () {
+    float valor, qtd_prest;
+    printf ("Digite o valor do produto");
+    scanf ("%d", &valor);
+    printf ("Escolha a quantidade de prestacoes");
+    scanf ("%d", &qtd_prest);
+    switch (qtd_prest)
+    {
+    case 5:
+        printf ("%d",valor/qtd_prest);
+        break;
+    case 10:
+        printf ("%d",valor/qtd_prest);
+        break;
+    case 12:
+        printf ("%d",valor/qtd_prest);
+        break;
+    case 24:
+        printf ("%d",valor/qtd_prest);
+        break;
+    
+    default:
+        printf ("Opcao invalida");
+        break;
+    }
+}
